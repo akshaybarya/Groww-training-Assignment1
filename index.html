@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Alert Box -->
+    <div id="dialogoverlay">
+      <div id="dialogbox">
+        <div id="dialogboxhead">
+          <h3>Opps</h3>
+        </div>
+        <div class="dialogboxbody">
+          <p id="dialogboxbody"></p>
+        </div>
+        <div id="dialogboxfoot">
+          <button id="dialogboxfootbutton">OK</button>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <h1>Assignment 1</h1>
+    </header>
+
+    <main class="container">
+      <!-- Form Component -->
+      <form method="post" action="#" id="table" class="table">
+        <table>
+          <tbody>
+            <tr class="tr">
+              <td>
+                <label for="first-name"> First Name </label>
+              </td>
+              <td>
+                <input type="text" id="first-name" name="first-name" required />
+              </td>
+            </tr>
+
+            <tr class="tr">
+              <td>
+                <label for="last-name"> Last Name </label>
+              </td>
+              <td>
+                <input type="text" id="last-name" name="last-name" required />
+              </td>
+            </tr>
+
+            <tr class="tr">
+              <td>
+                <label for="gender"> Gender </label>
+              </td>
+              <td>
+                <div class="radio-buttons" id="gender">
+                  <span
+                    ><input type="radio" id="male" name="gender" value="male" />
+                    <label id="radio-label" for="male"> Male</label></span
+                  >
+                  <span
+                    ><input
+                      type="radio"
+                      id="female"
+                      name="gender"
+                      value="female"
+                    /><label id="radio-label" for="female">Female</label></span
+                  >
+                </div>
+              </td>
+            </tr>
+
+            <tr class="tr">
+              <td>
+                <label id="maretial-status"> Maretial-Status </label>
+              </td>
+              <td>
+                <div class="radio-buttons">
+                  <span
+                    ><input
+                      type="radio"
+                      id="married"
+                      name="maretial-status"
+                      value="married"
+                      onclick="alterMaretialStatus(true)"
+                    />
+                    <label id="radio-label" for="married">Married</label></span
+                  >
+                  <span
+                    ><input
+                      type="radio"
+                      id="unmarried"
+                      name="maretial-status"
+                      value="unmarried"
+                      onclick="alterMaretialStatus(false)"
+                    />
+                    <label id="radio-label" for="unmarried">Unmarried</label>
+                  </span>
+                </div>
+              </td>
+            </tr>
+
+            <tr class="tr spouse-row" id="spouse-row">
+              <td>
+                <label for="spouse-name"> Name of Spouse </label>
+              </td>
+              <td>
+                <input type="text" id="spouse-name" name="spouse-name" />
+              </td>
+            </tr>
+
+            <tr class="tr">
+              <td>
+                <label for="other-details"> Other Details </label>
+              </td>
+              <td>
+                <textarea id="other-details" name="other-details"></textarea>
+              </td>
+            </tr>
+
+            <tr class="tr">
+              <td colspan="2" id="terms-row">
+                <input
+                  type="checkbox"
+                  value="checked"
+                  id="check-box"
+                  name="check-box"
+                />
+                <label for="check-box">
+                  I Accept
+                  <a href="#" class="terms"
+                    ><strong>terms & conditions</strong></a
+                  >
+                </label>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="button-column">
+                <button type="reset" onclick="alterMaretialStatus(false)">
+                  Reset
+                </button>
+              </td>
+              <td>
+                <button type="submit">Save</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+
+      <!-- Thank you Component -->
+      <div id="thank-you" class="thank-you">
+        <h2>Thank You</h2>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
