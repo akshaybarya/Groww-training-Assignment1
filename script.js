@@ -2,7 +2,6 @@
 
 function CustomAlert() {
   this.render = function (message, focus) {
-    let win_w = window.innerWidth;
     let win_h = window.innerHeight;
 
     const dialogoverlay = document.getElementById("dialogoverlay");

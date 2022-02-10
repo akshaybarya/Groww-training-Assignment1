@@ -207,6 +207,7 @@ button[type="submit"] {
   .radio-buttons {
     max-width: 100%;
     justify-content: space-around;
+    margin-right: 5vw;
   }
 
   .radio-buttons span {
