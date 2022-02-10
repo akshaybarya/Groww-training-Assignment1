@@ -13,6 +13,12 @@ function CustomAlert() {
     dialogbox.style.display = "flex";
 
     document.getElementById("dialogboxbody").innerHTML = message;
+
+    document.getElementById("dialogbox").onclick = (e) => {
+      e.stopPropagation();
+    };
+    document.getElementById("dialogoverlay").onclick = (e) =>
+      Alert.setFocus(focus);
     document.getElementById("dialogboxfootbutton").onclick = (e) =>
       Alert.setFocus(focus);
   };

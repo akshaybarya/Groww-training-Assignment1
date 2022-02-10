@@ -8,6 +8,7 @@ html,
 body {
   height: 100%;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -37,7 +38,7 @@ header {
 
 table {
   height: inherit;
-  width: 60vw;
+  width: inherit;
   border-collapse: collapse;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -49,24 +50,16 @@ tr {
 }
 
 td {
-  padding: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
-  width: 50%;
 }
 
 .tr td:nth-child(odd) {
   text-align: start;
-  padding-left: 12vw;
 }
 
 .tr label {
   margin: auto;
-  font-size: large;
-}
-
-#radio-label {
-  margin-left: 0.5vw;
 }
 
 textarea,
@@ -77,19 +70,17 @@ input[type="text"] {
   width: 75%;
   padding-left: 0.5vw;
   padding-right: 0.5vw;
-  border-radius: 1vw;
+  border-radius: 15px;
 }
 
 textarea {
-  padding-top: 0.5vw;
-  padding-bottom: 0.5vw;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
 }
 
 .radio-buttons {
   display: flex;
-  max-width: 80%;
   margin: auto;
-  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -149,6 +140,7 @@ button[type="submit"] {
   top: 0;
   left: 0;
   width: 100%;
+  min-height: 100%;
   z-index: 10;
 }
 
@@ -178,4 +170,92 @@ button[type="submit"] {
 
 #dialogboxfootbutton {
   width: 100%;
+}
+
+@media (max-width: 480px) {
+  table {
+    min-width: 80vw;
+  }
+
+  td {
+    padding: 1vw;
+  }
+
+  .tr td:nth-child(odd) {
+    padding-left: 5vw;
+    width: 40%;
+  }
+
+  .tr td:nth-child(even) {
+    width: 60%;
+  }
+
+  .tr label {
+    font-size: small;
+  }
+
+  #radio-label {
+    margin-left: 0.25vw;
+    font-size: x-small;
+  }
+
+  textarea {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  .radio-buttons {
+    max-width: 100%;
+    justify-content: space-around;
+  }
+
+  .radio-buttons span {
+    width: 50%;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .button-column {
+    width: 50%;
+  }
+
+  /* Dialog Box */
+  #dialogbox {
+    width: 60%;
+    height: fit-content;
+    border-radius: 5vw;
+    font-size: small;
+  }
+}
+
+@media (min-width: 481px) {
+  table {
+    min-width: 60vw;
+  }
+
+  td {
+    padding: 10px;
+    width: 50%;
+  }
+
+  .tr td:nth-child(odd) {
+    padding-left: 12vw;
+  }
+
+  .tr label {
+    font-size: large;
+  }
+
+  #radio-label {
+    margin-left: 0.5vw;
+  }
+
+  .radio-buttons {
+    max-width: 80%;
+  }
+
+  .radio-buttons span {
+    width: 10vw;
+    justify-content: space-evenly;
+  }
 }
