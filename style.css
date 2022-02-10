@@ -159,7 +159,8 @@ button[type="submit"] {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 30%;
-  height: 30%;
+  min-height: 30%;
+  height: fit-content;
   padding: 5vh;
   border-radius: 1vw;
   z-index: 11;

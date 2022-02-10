@@ -65,9 +65,9 @@ document.addEventListener("submit", function (e) {
     ).value;
   }
   if (maretialStatus === "married") {
-    const spouce = document.getElementById("spouce-name").value;
+    const spouce = document.getElementById("spouse-name").value;
     if (spouce.indexOf(" ") >= 0) {
-      errors.push("spouce-name");
+      errors.push("spouse-name");
     }
   }
 
@@ -88,11 +88,11 @@ function dispatchErrors(errors) {
   for (let error of errors) {
     switch (error) {
       case "first-name": {
-        message = message + "Enter First Name without white Spaces.";
+        message = message + "Please Enter First Name without white Spaces.";
         break;
       }
       case "last-name": {
-        message = message + "Enter Last Name without white Spaces.";
+        message = message + "Please Enter Last Name without white Spaces.";
         break;
       }
       case "gender": {
@@ -101,6 +101,10 @@ function dispatchErrors(errors) {
       }
       case "maretial-status": {
         message = message + "Please select your Maretial status.";
+        break;
+      }
+      case "spouse-name": {
+        message = message + "Please Enter Spouse Name without white Spaces.";
         break;
       }
       case "check-box": {
@@ -125,7 +129,13 @@ function sucess() {
 
 function alterMaretialStatus(enable) {
   const spouce = document.getElementById("spouse-row");
+  const spouceField = document.getElementById("spouse-name");
 
-  if (enable === true) spouce.style.display = "table-row";
-  else spouce.style.display = "none";
+  if (enable === true) {
+    spouce.style.display = "table-row";
+    spouceField.required = true;
+  } else {
+    spouce.style.display = "none";
+    spouceField.required = false;
+  }
 }
